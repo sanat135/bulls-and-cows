@@ -1,0 +1,166 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #edf2ff;
+  background: #101522;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  width: min(100% - 32px, 760px);
+  margin: 40px auto;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(32px, 7vw, 48px);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.description {
+  color: #b6c2d9;
+  line-height: 1.6;
+}
+
+.panel {
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid #344157;
+  border-radius: 18px;
+  background: #1a2435;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex: 1 1 180px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input,
+select,
+button {
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid #536580;
+  border-radius: 10px;
+  font: inherit;
+}
+
+input,
+select {
+  color: #edf2ff;
+  background: #101522;
+}
+
+button {
+  border-color: transparent;
+  color: #10251f;
+  background: #70e0b7;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #9aefcf;
+}
+
+:focus-visible {
+  outline: 3px solid #ffda79;
+  outline-offset: 3px;
+}
+
+select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message {
+  padding: 16px;
+  border-left: 4px solid #70e0b7;
+  background: #172c2b;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 24px;
+  color: #70e0b7;
+  font-weight: bold;
+}
+
+.guess-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.guess-form input {
+  width: 100%;
+  font-size: 24px;
+  letter-spacing: 5px;
+}
+
+.guess-form .description {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.history,
+.records {
+  padding-left: 28px;
+}
+
+.history li,
+.records li {
+  padding: 12px 4px;
+  border-bottom: 1px solid #344157;
+  line-height: 1.6;
+}
+
+.history strong {
+  display: inline-block;
+  min-width: 100px;
+  margin-right: 12px;
+  color: #70e0b7;
+  letter-spacing: 3px;
+}
+
+.history span {
+  display: inline-block;
+}
+
+@media (max-width: 480px) {
+  .app {
+    margin: 24px auto;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .history strong,
+  .history span {
+    display: block;
+  }
+}
